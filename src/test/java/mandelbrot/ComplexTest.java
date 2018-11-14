@@ -2,9 +2,7 @@ package mandelbrot;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ComplexTest {
     private final Complex onePlusI = new Complex(1,1);
@@ -183,6 +181,10 @@ public class ComplexTest {
     }
 
     @Test
-    void test
+    void testModulus(){
+        assertEquals(0, Complex.ZERO.modulus());
+        assertEquals(1, Complex.ONE.modulus());
+        assertEquals((int)Math.sqrt(8), two.modulus());
+    }
 }
 
