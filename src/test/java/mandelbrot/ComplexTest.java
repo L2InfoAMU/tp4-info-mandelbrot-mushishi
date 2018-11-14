@@ -186,5 +186,12 @@ public class ComplexTest {
         assertEquals(1, Complex.ONE.modulus());
         assertEquals((int)Math.sqrt(8), two.modulus());
     }
+
+    @Test
+    void testPow(){
+        assertThrows(ArithmeticException.class, ()->Complex.ZERO.pow(-1));
+        assertEquals(Complex.ZERO, Complex.ONE.pow(0));
+        assertEquals(Complex.ZERO, Complex.ONE.pow(4));
+    }
 }
 

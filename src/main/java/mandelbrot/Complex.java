@@ -187,11 +187,14 @@ public class Complex {
      * @return the complex number <code>this ** p</code>
      */
     Complex pow(int p) {
+        if (p < 0)
+            throw new ArithmeticException("p is a non-negative integer");
         if (p == 0)
             return ZERO;
         Complex result = (this.multiply(this)).pow(p / 2);
         if (p % 2 == 1)
             result = result.multiply(this);
+        System.out.println( result);
         return result;
     }
 
