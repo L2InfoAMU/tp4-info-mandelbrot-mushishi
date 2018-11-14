@@ -159,5 +159,13 @@ public class ComplexTest {
         assertEquals(new Complex(1,0), Complex.ZERO.add(Complex.ONE));
         assertEquals(new Complex(0,1), Complex.ZERO.add(Complex.I));
     }
+
+    @Test
+    void testSubtract(){
+        assertEquals(new Complex(1,0), Complex.ZERO.subtract(minusOne));
+        assertEquals(new Complex(0,0), Complex.ZERO.subtract(Complex.ZERO));
+        assertEquals(new Complex(-1,0), Complex.ZERO.subtract(Complex.ONE));
+        assertEquals(new Complex(0,-1), Complex.ZERO.subtract(Complex.I));
+    }
 }
 
