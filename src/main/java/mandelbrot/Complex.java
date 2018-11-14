@@ -156,8 +156,6 @@ public class Complex {
             throw new ArithmeticException("divide by zero");
         }
         double m = squaredModulus();
-        System.out.println("m = "+ m);
-        System.out.println( "real = " +real / m + " impaginary = " + imaginary / m);
         return new Complex(Math.abs(real) / m, Math.abs(imaginary) / m);
 
     }
