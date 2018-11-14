@@ -192,7 +192,6 @@ public class Complex {
         Complex result = (this.multiply(this)).pow(p / 2);
         if (p % 2 == 1)
             result = result.multiply(this);
-        System.out.println( result);
         return result;
     }
 
