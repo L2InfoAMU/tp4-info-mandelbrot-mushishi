@@ -143,4 +143,15 @@ public class ComplexTest {
         assertEquals(true,new Complex (-1,-1).equals(new Complex(-1,-1)));
 
     }
+
+    @Test
+    void testReal(){
+        assertEquals(new Complex (1 , 0 ), Complex.real(1));
+        assertEquals(new Complex (2 , 0 ), Complex.real(2));
+        assertEquals(new Complex (-1 , 0 ), Complex.real(-1));
+        assertEquals(new Complex (0 , 0 ), Complex.real(0));
+    }
+
+
 }
+
